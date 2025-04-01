@@ -1,0 +1,25 @@
+@startuml
+
+Alumno --> Materia : aprobadas
+Inscripcion --> Alumno : alumno
+Inscripcion --> Materia : materias \n(Materias a las que se inscribe)
+Materia --> Materia : correlativas
+
+class Inscripcion {
+-alumno: Alumno
+-materias: Set<Materia>
+
++boolean aprobada()
+}
+
+class Alumno {
+-Set<Materia> aprobadas
++boolean aprobo(Materia)
+}
+
+class Materia {
+-Set<Materia> correlativas
++boolean cumpleCorrelativas(Alumno)
+}
+
+@enduml
