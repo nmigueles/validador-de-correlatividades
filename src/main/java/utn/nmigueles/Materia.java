@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
+package utn.nmigueles;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Materia {
-    private final List<Materia> correlativas;
-
-    public Materia() {
-        this.correlativas = new ArrayList<>();
-    }
+    private final Set<Materia> correlativas = new HashSet<>();
 
     public void agregarCorrelativa(Materia materia) {
         this.correlativas.add(materia);
