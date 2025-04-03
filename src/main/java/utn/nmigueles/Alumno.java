@@ -9,7 +9,7 @@ public class Alumno {
         this.aprobadas = aprobadas;
     }
 
-    public boolean aprobo(Materia materia) {
+    public boolean aproboMateria(Materia materia) {
         return aprobadas.contains(materia);
     }
 }

@@ -1,9 +1,9 @@
 @startuml
 
-Alumno --> Materia : aprobadas
-Inscripcion --> Alumno : alumno
-Inscripcion --> Materia : materias \n(Materias a las que se inscribe)
-Materia --> Materia : correlativas
+Alumno o--- Materia : aprobadas
+Inscripcion --> "1" Alumno : alumno
+Inscripcion --> "1..*" Materia : materias \n(Materias a las que se inscribe)
+Materia --> "0..*" Materia : correlativas
 
 class Inscripcion {
 -alumno: Alumno
@@ -14,7 +14,7 @@ class Inscripcion {
 
 class Alumno {
 -Set<Materia> aprobadas
-+boolean aprobo(Materia)
++boolean aproboMateria(Materia)
 }
 
 class Materia {

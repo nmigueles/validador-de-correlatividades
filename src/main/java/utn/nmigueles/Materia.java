@@ -11,6 +11,6 @@ public class Materia {
     }
 
     public boolean cumpleCorrelativas(Alumno alumno) {
-        return correlativas.stream().allMatch(alumno::aprobo);
+        return correlativas.stream().allMatch(alumno::aproboMateria);
     }
 }
